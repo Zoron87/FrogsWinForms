@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             stepsLabel = new Label();
+            RestartGame = new Button();
             SuspendLayout();
             // 
             // stepsLabel
@@ -41,11 +42,23 @@
             stepsLabel.TabIndex = 9;
             stepsLabel.Text = "Кол-во шагов: 0";
             // 
+            // RestartGame
+            // 
+            RestartGame.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            RestartGame.Location = new Point(772, 115);
+            RestartGame.Name = "RestartGame";
+            RestartGame.Size = new Size(118, 28);
+            RestartGame.TabIndex = 10;
+            RestartGame.Text = "Перезапустить";
+            RestartGame.UseVisualStyleBackColor = true;
+            RestartGame.Click += RestartGame_Click;
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(902, 155);
+            Controls.Add(RestartGame);
             Controls.Add(stepsLabel);
             Name = "MainForm";
             Text = "Frogs";
@@ -56,5 +69,6 @@
 
         #endregion
         private Label stepsLabel;
+        private Button RestartGame;
     }
 }
